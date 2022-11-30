@@ -2,7 +2,7 @@
 
 Google Chromeで作成したPDFファイル等にありがちな、UnicodeのCJK部首補助文字や康煕部首文字に関連する文字化けを修正するためのライブラリです。
 
-例えば、文字化けした文字列「大麦」を、本来の漢字に置き換えて「大麦」に変換します。
+例えば、文字化けした文字列「⼤⻨」を、本来の漢字に置き換えて「大麦」に変換します。
 
 文字化けの現象について、詳細はこちらを参照してください。  
 ➡ [PDFをコピペするとなぜ“文字化け”が起きてしまうのか](https://logmi.jp/tech/articles/324366)
@@ -17,7 +17,7 @@ Google Chromeで作成したPDFファイル等にありがちな、UnicodeのCJK
 <script type="text/javascript" src="radicalchar.js"></script>
 
 <script>
-var str = "大麦";
+var str = "⼤⻨";
 var str2 = RadicalChar.Normalize( str );
 </script>
 ```
@@ -25,7 +25,7 @@ var str2 = RadicalChar.Normalize( str );
 ### C#の場合
 
 ```csharp
-string str = "大麦";
+string str = "⼤⻨";
 string str2 = RadicalChar.Normalize( str );
 ```
 
@@ -34,6 +34,6 @@ string str2 = RadicalChar.Normalize( str );
 ```python
 import radicalchar;
 
-str = "大麦"
+str = "⼤⻨"
 str2 = radicalchar.normalize( str )
 ```
