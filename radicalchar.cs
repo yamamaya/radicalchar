@@ -265,4 +265,13 @@ class RadicalChar {
         { '⿔', '龜' },  // 2fd4 : 9f9c
         { '⿕', '龠' },  // 2fd5 : 9fa0
     };
+
+    static public string Normalize( string str ) {
+        foreach ( KeyValuePair<char, char> t in convlist ) {
+            if ( str.IndexOf( t.Key ) != -1 ) {
+                str = str.Replace( t.Key, t.Value );
+            }
+        }
+        return str;
+    }
 }

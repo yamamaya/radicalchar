@@ -262,3 +262,9 @@ convlist = {
     '⿔': '龜',  # 2fd4 : 9f9c
     '⿕': '龠',  # 2fd5 : 9fa0
 }
+
+def normalize( str ):
+    for a, b in convlist.items():
+        if a in str:
+            str = str.replace( a, b )
+    return str
